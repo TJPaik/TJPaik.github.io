@@ -1,9 +1,15 @@
 const publications = [
     {
         "year": "2026",
+        "title": "HyperAnalog: Domain-Aware Hypergraph Transformer for Analog Circuit Representation Learning",
+        "authors": "<strong>Paik, T.</strong>, Kim, S.",
+        "venue": "DAC 2026"
+    },
+    {
+        "year": "2026",
         "title": "BADGE: Boundary-Aware Dirichlet Graph Embedding for Initialization in DREAMPlace",
         "authors": "Park, J., <strong>Paik, T.</strong>",
-        "venue": "DATE 2026, IEEE"
+        "venue": "DATE 2026"
     },
     {
         "year": "2025",
