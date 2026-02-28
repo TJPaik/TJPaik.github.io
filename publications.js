@@ -50,7 +50,7 @@ const publications = [
         "year": "2024",
         "title": "Deep learning based ECG segmentation for delineation of diverse arrhythmias",
         "authors": "Joung, C., Kim, M., <strong>Paik, T.</strong>, Kong, S. H., Oh, S. Y., Jeon, W. K., ... & van Koert, O.",
-        "venue": "PLOS One, 19(6), e0303178" (2024),
+        "venue": "PLOS One, 19(6), e0303178 (2024)",
         "link": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0303178"
     },
     {
