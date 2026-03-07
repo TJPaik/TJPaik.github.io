@@ -9,8 +9,29 @@
     --sidebar-bg: #ffffff;
     --card-bg: #ffffff;
     --border-color: #e9ecef;
+    --muted-color: #6c757d;
+    --desc-color: #495057;
+    --year-color: #adb5bd;
+    --profile-placeholder-color: #adb5bd;
+    --profile-border-color: #ffffff;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-serif: 'Merriweather', serif;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1b1e;
+    --text-color: #c9d1d9;
+    --heading-color: #e6edf3;
+    --accent-color: #7eb8da;
+    --secondary-accent: #58a6ff;
+    --sidebar-bg: #161618;
+    --card-bg: #21222c;
+    --border-color: #30363d;
+    --muted-color: #8b949e;
+    --desc-color: #a8b2bc;
+    --year-color: #6e7681;
+    --profile-placeholder-color: #6e7681;
+    --profile-border-color: #30363d;
 }
 
 * {
@@ -24,6 +45,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -58,6 +80,7 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     flex-shrink: 0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .profile-section {
@@ -74,13 +97,13 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid white;
+    border: 3px solid var(--profile-border-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
 }
 
 .profile-placeholder {
     font-size: 4rem;
-    color: #adb5bd;
+    color: var(--profile-placeholder-color);
 }
 
 .profile-image {
@@ -106,7 +129,7 @@ a:hover {
 
 .affiliation {
     font-size: 0.9rem;
-    color: #6c757d;
+    color: var(--muted-color);
     margin-bottom: 1.5rem;
 }
 
@@ -118,7 +141,7 @@ a:hover {
 }
 
 .social-links a {
-    color: #6c757d;
+    color: var(--muted-color);
     font-size: 1.25rem;
     transition: transform 0.2s ease, color 0.2s ease;
 }
@@ -224,7 +247,7 @@ a:hover {
 
 .timeline-date {
     font-size: 0.85rem;
-    color: #6c757d;
+    color: var(--muted-color);
     margin-bottom: 0.25rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -245,7 +268,7 @@ a:hover {
 
 .timeline-content .location {
     font-size: 0.9rem;
-    color: #6c757d;
+    color: var(--muted-color);
     margin-bottom: 0.75rem;
     font-style: italic;
 }
@@ -253,7 +276,7 @@ a:hover {
 .timeline-content .description {
     list-style-type: disc;
     padding-left: 1.25rem;
-    color: #495057;
+    color: var(--desc-color);
 }
 
 .timeline-content .description li {
@@ -275,7 +298,7 @@ a:hover {
 
 .pub-year {
     font-weight: 700;
-    color: #adb5bd;
+    color: var(--year-color);
     min-width: 3rem;
     text-align: right;
 }
@@ -292,7 +315,7 @@ a:hover {
 }
 
 .pub-authors {
-    color: #495057;
+    color: var(--desc-color);
     margin-bottom: 0.25rem;
 }
 
@@ -309,7 +332,7 @@ a:hover {
     padding: 0.1rem 0.5rem;
     border-radius: 4px;
     margin-top: 0.25rem;
-    color: #6c757d;
+    color: var(--muted-color);
     text-decoration: none;
     margin-left: 0.5rem;
 }
@@ -336,7 +359,7 @@ a:hover {
 
 .achievement-date {
     font-weight: 700;
-    color: #adb5bd;
+    color: var(--year-color);
     min-width: 3rem;
     /* Match pub-year width */
     text-align: right;
@@ -356,7 +379,7 @@ a:hover {
 
 .achievement-desc,
 .achievement-venue {
-    color: #495057;
+    color: var(--desc-color);
     font-size: 0.95rem;
 }
 
@@ -377,8 +400,42 @@ a:hover {
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
     text-align: center;
-    color: #adb5bd;
+    color: var(--year-color);
     font-size: 0.85rem;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.25rem;
+    border-radius: 0;
+    cursor: pointer;
+    color: var(--muted-color);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.theme-toggle i {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--accent-color);
+}
+
+.theme-toggle:hover i {
+    transform: rotate(25deg);
 }
 
 /* Responsive Design */
@@ -406,6 +463,14 @@ a:hover {
 
     .navigation li {
         margin-bottom: 0;
+    }
+
+    .theme-toggle {
+        margin: 1rem auto 0;
+        width: auto;
+        border-top: none;
+        padding-top: 0.5rem;
+        justify-content: center;
     }
 
     .main-content {
