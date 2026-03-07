@@ -15,11 +15,21 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Apply saved theme before paint to prevent FOIT
+        (function () {
+            const saved = localStorage.getItem('theme');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 
 <body>
     <div class="container">
         <aside class="sidebar">
+
             <div class="profile-section">
                 <div class="profile-image-container">
                     <!-- Placeholder for profile image -->
@@ -47,6 +57,10 @@
                     <li><a href="#publications">Publications</a></li>
                     <li><a href="#talks-achievements">Talks & Achievements</a></li>
                 </ul>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
             </nav>
         </aside>
 
@@ -54,9 +68,11 @@
             <section id="about" class="section">
                 <h2 class="section-title">Research Interests</h2>
                 <ul class="interest-list">
-                    <li>Topological Deep Learning / Topological Data Analysis</li>
-                    <li>(Hyper) Graph Neural Network</li>
                     <li>Electronic Design Automation</li>
+                    <li>(Hyper) Graph Neural Network</li>
+                    <li>Topological Deep Learning / Topological Data Analysis</li>
+                    <li>AI-driven simulation acceleration</li>
+                    <li>3D Object Representation</li>
                 </ul>
             </section>
 
