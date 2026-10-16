@@ -297,10 +297,6 @@ a:hover {
     white-space: nowrap;
 }
 
-.service-list abbr {
-    text-decoration: none;
-}
-
 /* Publications */
 .publication-list {
     display: flex;
