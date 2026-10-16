@@ -284,16 +284,25 @@ a:hover {
 }
 
 /* Academic Service */
-.service-list {
-    list-style: none;
+.service-timeline .timeline-item {
+    margin-bottom: 1.5rem;
 }
 
-.service-list li + li {
-    margin-top: 0.75rem;
+.service-timeline .timeline-item:last-child {
+    margin-bottom: 0;
 }
 
-.service-year {
-    color: var(--muted-color);
+.service-heading .timeline-date {
+    margin-right: 0.75rem;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.service-timeline .role {
+    font-weight: 400;
+}
+
+.service-timeline .role strong {
     white-space: nowrap;
 }
 
