@@ -284,25 +284,12 @@ a:hover {
 }
 
 /* Academic Service */
-.service-timeline .timeline-item {
-    margin-bottom: 1.5rem;
-}
-
-.service-timeline .timeline-item:last-child {
-    margin-bottom: 0;
-}
-
-.service-heading .timeline-date {
-    margin-right: 0.75rem;
-    margin-bottom: 0;
+.service-list .achievement-date {
+    flex: 0 0 6rem;
     white-space: nowrap;
 }
 
-.service-timeline .role {
-    font-weight: 400;
-}
-
-.service-timeline .role strong {
+.service-list strong {
     white-space: nowrap;
 }
 
@@ -513,5 +500,10 @@ a:hover {
     .achievement-date {
         text-align: left;
         font-size: 0.9rem;
+    }
+
+    .service-list .achievement-item {
+        flex-direction: row;
+        gap: 1rem;
     }
 }
