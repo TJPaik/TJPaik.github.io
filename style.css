@@ -286,7 +286,6 @@ a:hover {
 /* Academic Service */
 .service-list .achievement-date {
     flex: 0 0 6rem;
-    text-align: left;
     white-space: nowrap;
 }
 
