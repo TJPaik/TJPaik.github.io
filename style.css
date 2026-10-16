@@ -283,6 +283,24 @@ a:hover {
     margin-bottom: 0.25rem;
 }
 
+/* Academic Service */
+.service-list {
+    list-style: none;
+}
+
+.service-list li + li {
+    margin-top: 0.75rem;
+}
+
+.service-year {
+    color: var(--muted-color);
+    white-space: nowrap;
+}
+
+.service-list abbr {
+    text-decoration: none;
+}
+
 /* Publications */
 .publication-list {
     display: flex;
